@@ -1,0 +1,1 @@
+export { BorderCard } from './main';

@@ -1,9 +1,9 @@
 module.exports = {
   stories: [
-    "../components/**/*.stories.mdx",
-    "../components/**/*.stories.@(js|jsx|ts|tsx)",
+    '../src/shared/**/*.stories.mdx',
+    '../src/shared/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: async (config) => {
     return {
       ...config,
@@ -11,8 +11,8 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          "@emotion/core": "@emotion/react",
-          "emotion-theming": "@emotion/react",
+          '@emotion/core': '@emotion/react',
+          'emotion-theming': '@emotion/react',
         },
       },
     };
